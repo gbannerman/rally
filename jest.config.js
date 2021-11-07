@@ -3,7 +3,24 @@
  * https://jestjs.io/docs/configuration
  */
 
-const config = {
+module.exports = {
+  moduleFileExtensions: [
+    "js",
+    "ts",
+    "svelte"
+  ],
+  setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"],
+  testEnvironment: "jsdom",
+  transform: {
+    "^.+\\.svelte$": [
+      "svelte-jester",
+      {
+        preprocess: true
+      }
+    ],
+    "^.+\\.ts$": "ts-jest"
+  },
+
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -192,5 +209,3 @@ const config = {
   // Whether to use watchman for file crawling
   // watchman: true,
 };
-
-module.exports = config;
