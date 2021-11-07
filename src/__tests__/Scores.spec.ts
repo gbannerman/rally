@@ -3,6 +3,15 @@ import {render, fireEvent} from '@testing-library/svelte'
 import Scores from '../Scores.svelte';
 
 describe("Scores component", () => {
+  it("renders correctly", () => {
+    const { container } = render(Scores, {
+      scores: [0, 0],
+      onScoreClick: () => {}
+    });
+
+    expect(container).toMatchSnapshot();
+  });
+
   it("displays scores of each player", () => {
     const { getAllByRole } = render(Scores, {
       scores: [5, 9], 
