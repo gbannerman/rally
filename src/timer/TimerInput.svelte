@@ -5,8 +5,6 @@
 
   let timerInput = null;
 
-  // $: placeholderHtml = getHighlightText(value);
-
   const widthMap = {
     0: "width: 10px; margin-right: 2px; padding-left: 0px; right: 0px;",
     1: "width: 20px; margin-left: 21px;",
@@ -40,28 +38,10 @@
 
     timerInput.focus();
   };
-
-  // const getHighlightText = (inputValue) => {
-  //   const highlightedIndex = 4 - inputValue.length;
-
-  //   if (highlightedIndex < 0) return;
-
-  //   const result = ["0", "0", ":", "0", "0"].reduce((prev, curr, i) => {
-  //     if (i === highlightedIndex) {
-  //       return prev + `<span class="highlight">${curr}</span>`;
-  //     }
-  //     return prev + curr;
-  //   }, "");
-
-  //   return result;
-  // };
 </script>
 
 <div class="TimerInput">
-  <div class="timer placeholder" on:click={focusInput}>
-    <!-- {@html placeholderHtml} -->
-    00:00
-  </div>
+  <div class="timer placeholder" on:click={focusInput}>00:00</div>
   <form on:submit={onSubmit}>
     <input
       bind:this={timerInput}
