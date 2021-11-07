@@ -21,18 +21,16 @@ export const removeSeperator = (string: string) => {
 }
 
 export const convertTimerValueToMilliseconds = (value) => {
-  const duration = removeSeperator(value);
-  const units = duration.split("");
-  let seconds = parseInt(units.splice(-2).join(""), 10);
-  let minutes = parseInt(units.join(""), 10);
-
-  if (Number.isNaN(minutes)) {
-    minutes = 0;
-  }
-
-  if (Number.isNaN(seconds)) {
-    seconds = 0;
-  }
+  const units = value.split(":")
+  units.reverse();
+  const [secondsString, minutesString] = units;
+  
+  const seconds = secondsString === undefined || secondsString === ""
+  ? 0
+  : parseInt(secondsString, 10);
+  const minutes = minutesString === undefined || minutesString === ""
+  ? 0
+  : parseInt(minutesString, 10);
 
   return seconds * 1000 + minutes * 60 * 1000;
 };
@@ -111,6 +109,5 @@ export class CountdownTimer {
     } else {
       this.timeout = setTimeout(this.tick.bind(this), Math.max(0, this.interval-drift));
     }
-    
   }
 }
