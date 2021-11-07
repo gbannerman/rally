@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimerDisplay component renders correctly 1`] = `
+<body>
+  <div>
+    <div
+      class="TimerDisplay svelte-c1o0ac"
+    >
+      <div
+        class="timer svelte-c1o0ac"
+      >
+        00:09
+      </div>
+    </div>
+  </div>
+</body>
+`;
