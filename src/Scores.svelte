@@ -4,12 +4,12 @@
 </script>
 
 <div class="Scores">
-  <div class="score player1" on:click={() => onScoreClick(0)}>
+  <button class="score player1" on:click={() => onScoreClick(0)}>
     <div>{scores[0]}</div>
-  </div>
-  <div class="score player2" on:click={() => onScoreClick(1)}>
+  </button>
+  <button class="score player2" on:click={() => onScoreClick(1)}>
     <div>{scores[1]}</div>
-  </div>
+  </button>
 </div>
 
 <style>
