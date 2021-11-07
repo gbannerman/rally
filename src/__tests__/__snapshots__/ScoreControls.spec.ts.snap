@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScoreControls component renders correctly 1`] = `
+<body>
+  <div>
+    <div
+      class="ScoreControls svelte-1p4m5fg"
+    >
+      <button
+        class="svelte-1p4m5fg"
+      >
+        Reset score
+      </button>
+    </div>
+  </div>
+</body>
+`;
