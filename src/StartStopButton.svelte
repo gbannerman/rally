@@ -1,7 +1,7 @@
 <script lang="ts">
   import { PlayIcon, PauseIcon } from "svelte-feather-icons";
 
-  export let running;
+  export let running: boolean;
   export let onToggle: () => void;
 </script>
 

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { convertMillisecondsToTimerValue } from "./timer";
 
-  export let remainingMilliseconds;
+  export let remainingMilliseconds: number;
 </script>
 
 <div class="TimerDisplay">

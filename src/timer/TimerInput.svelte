@@ -3,9 +3,9 @@
 
   export let value = "";
 
-  let timerInput = null;
+  let timerInput: HTMLInputElement = null;
 
-  const widthMap = {
+  const widthMap: { [key: number]: string } = {
     0: "width: 10px; margin-right: 2px; padding-left: 0px; right: 0px;",
     1: "width: 20px; margin-left: 21px;",
     2: "width: 37px; margin-left: 5px;",

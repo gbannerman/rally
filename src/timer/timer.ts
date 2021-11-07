@@ -1,4 +1,4 @@
-const seperatorPositionMap = {
+const seperatorPositionMap: { [key: number]: number } = {
   3: 1,
   4: 2,
 }
@@ -20,7 +20,7 @@ export const removeSeperator = (string: string) => {
     : string.substring(0, seperatorPosition) + string.substring(seperatorPosition + 1);
 }
 
-export const convertTimerValueToMilliseconds = (value) => {
+export const convertTimerValueToMilliseconds = (value: string) => {
   const units = value.split(":")
   units.reverse();
   const [secondsString, minutesString] = units;
@@ -35,17 +35,17 @@ export const convertTimerValueToMilliseconds = (value) => {
   return seconds * 1000 + minutes * 60 * 1000;
 };
 
-export const getMinutesFromMilliseconds = (milliseconds) => {
+export const getMinutesFromMilliseconds = (milliseconds: number) => {
   return Math.floor(milliseconds / 1000 / 60);
 }
 
-export const getSecondsFromMilliseconds = (milliseconds) => {
+export const getSecondsFromMilliseconds = (milliseconds: number) => {
   return Math.floor(
     (milliseconds - getMinutesFromMilliseconds(milliseconds) * 1000 * 60) / 1000
   );
 }
 
-export const padSingleDigits = (number) => {
+export const padSingleDigits = (number: number) => {
   if (number < 10) {
     return `0${number}`;
   }
@@ -53,7 +53,7 @@ export const padSingleDigits = (number) => {
   return `${number}`;
 };
 
-export const convertMillisecondsToTimerValue = (milliseconds) => {
+export const convertMillisecondsToTimerValue = (milliseconds: number) => {
   const remainingMinutes = getMinutesFromMilliseconds(milliseconds);
   const remainingSeconds = getSecondsFromMilliseconds(milliseconds);
 
@@ -62,14 +62,19 @@ export const convertMillisecondsToTimerValue = (milliseconds) => {
 
 export class CountdownTimer {
   private interval: number;
-  private expectedEnd: any;
-  private expectedTick: any;
-  private timeout: any;
-  private errorFunc: any;
+  private expectedEnd: number;
+  private expectedTick: number;
+  private timeout: NodeJS.Timeout;
+  private errorFunc: () => void;
   private onFinish: () => void;
   private onTick: () => void;
 
-  constructor(interval, onFinish, onTick, errorFunc) {
+  constructor(
+    interval: number,
+    onFinish: () => void,
+    onTick: () => void,
+    errorFunc: () => void
+  ) {
     this.interval = interval;
     this.errorFunc = errorFunc;
     this.onFinish = onFinish;
@@ -78,7 +83,7 @@ export class CountdownTimer {
     this.expectedTick = null;
   }
 
-  start(duration) {
+  start(duration: number) {
     const currentTime = Date.now();
     this.expectedEnd = currentTime + duration;
     this.expectedTick = currentTime + this.interval;
