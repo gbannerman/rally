@@ -1,6 +1,6 @@
 import {render, fireEvent} from '@testing-library/svelte'
 
-import ScoreControls from '../ScoreControls.svelte';
+import ScoreControls from '../game/ScoreControls.svelte';
 
 describe("ScoreControls component", () => {
   it("renders correctly", () => {
