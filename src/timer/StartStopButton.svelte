@@ -5,15 +5,13 @@
   export let onToggle: () => void;
 </script>
 
-<div class="StartStopButton">
-  <button class={running ? "icon stop" : "icon start"} on:click={onToggle}>
-    {#if running}
-      <PauseIcon />
-    {:else}
-      <PlayIcon />
-    {/if}
-  </button>
-</div>
+<button class={running ? "icon stop" : "icon start"} on:click={onToggle}>
+  {#if running}
+    <PauseIcon />
+  {:else}
+    <PlayIcon />
+  {/if}
+</button>
 
 <style>
   .icon {
