@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Game component renders correctly 1`] = `
+<body>
+  <div>
+    <div
+      class="Timer svelte-u8xogd"
+    >
+      <div
+        class="TimerInput svelte-jd5xj"
+      >
+        <div
+          class="timer placeholder svelte-jd5xj"
+        >
+          00:00
+        </div>
+         
+        <form>
+          <input
+            class="timer input svelte-jd5xj"
+            inputmode="numeric"
+            maxlength="5"
+            style="width: 10px; margin-right: 2px; padding-left: 0px; right: 0px;"
+            type="text"
+          />
+        </form>
+      </div>
+       
+      <button
+        class="icon start svelte-znyfjv"
+      >
+        <svg
+          class="feather feather-play "
+          fill="none"
+          height="100%"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="100%"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon
+            points="5 3 19 12 5 21 5 3"
+          />
+        </svg>
+      </button>
+    </div>
+     
+    <div
+      class="Scores svelte-15zsq2a"
+    >
+      <button
+        class="score player1 svelte-15zsq2a"
+      >
+        <div
+          class="svelte-15zsq2a"
+        >
+          0
+        </div>
+      </button>
+       
+      <button
+        class="score player2 svelte-15zsq2a"
+      >
+        <div
+          class="svelte-15zsq2a"
+        >
+          0
+        </div>
+      </button>
+    </div>
+     
+    <div
+      class="ScoreControls svelte-1p4m5fg"
+    >
+      <button
+        class="svelte-1p4m5fg"
+      >
+        Reset score
+      </button>
+    </div>
+  </div>
+</body>
+`;
