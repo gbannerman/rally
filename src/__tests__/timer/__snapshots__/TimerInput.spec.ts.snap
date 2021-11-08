@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimerInput component renders correctly 1`] = `
+<body>
+  <div>
+    <div
+      aria-label="Timer"
+      class="TimerInput svelte-jd5xj"
+    >
+      <div
+        class="timer placeholder svelte-jd5xj"
+      >
+        00:00
+      </div>
+       
+      <form>
+        <input
+          class="timer input svelte-jd5xj"
+          inputmode="numeric"
+          maxlength="5"
+          style="width: 10px; margin-right: 2px; padding-left: 0px; right: 0px;"
+          type="text"
+        />
+      </form>
+    </div>
+  </div>
+</body>
+`;

@@ -21,13 +21,6 @@
     value = insertSeperator(withoutSeperator);
   };
 
-  const setCursorToEnd = (event: Event) => {
-    const input = event.target as HTMLInputElement;
-    input.focus();
-    const endOfInput = input.value.length;
-    input.setSelectionRange(endOfInput, endOfInput);
-  };
-
   const onSubmit = (event: Event) => {
     event.preventDefault();
     (document.activeElement as HTMLInputElement).blur();
@@ -37,11 +30,13 @@
     if (!timerInput) return;
 
     timerInput.focus();
+    const endOfInput = value.length;
+    timerInput.setSelectionRange(endOfInput, endOfInput);
   };
 </script>
 
-<div class="TimerInput">
-  <div class="timer placeholder" on:click={focusInput}>00:00</div>
+<div aria-label="Timer" class="TimerInput" on:click={focusInput}>
+  <div class="timer placeholder">00:00</div>
   <form on:submit={onSubmit}>
     <input
       bind:this={timerInput}
@@ -52,7 +47,7 @@
       style={inputWidth}
       {value}
       on:input={handleInput}
-      on:click={setCursorToEnd}
+      on:click={focusInput}
     />
   </form>
 </div>

@@ -7,6 +7,7 @@ exports[`Game component renders correctly 1`] = `
       class="Timer svelte-u8xogd"
     >
       <div
+        aria-label="Timer"
         class="TimerInput svelte-jd5xj"
       >
         <div

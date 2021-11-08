@@ -16,6 +16,7 @@
     "@rollup/plugin-typescript": "^8.0.0",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/svelte": "^3.0.3",
+    "@testing-library/user-event": "^13.5.0",
     "@tsconfig/svelte": "^2.0.0",
     "@types/jest": "^27.0.2",
     "jest": "^27.3.1",
