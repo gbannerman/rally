@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { convertMillisecondsToTimerValue } from "./timer";
+  import { convertMillisecondsToTimerValue } from "./timerService";
 
   export let remainingMilliseconds: number;
 </script>

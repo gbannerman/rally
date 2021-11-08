@@ -3,7 +3,7 @@
     convertMillisecondsToTimerValue,
     convertTimerValueToMilliseconds,
     CountdownTimer,
-  } from "./timer";
+  } from "./timerService";
   import StartStopButton from "./StartStopButton.svelte";
   import TimerDisplay from "./TimerDisplay.svelte";
   import TimerInput from "./TimerInput.svelte";

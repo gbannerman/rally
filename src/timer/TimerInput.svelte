@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { insertSeperator, removeSeperator } from "./timer";
+  import { insertSeperator, removeSeperator } from "./timerService";
 
   export let value = "";
 
