@@ -6,10 +6,11 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public --no-clear --host 0.0.0.0",
-    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:svelte": "svelte-check --tsconfig ./tsconfig.json",
     "test": "jest",
     "test:watch": "jest --watch",
-    "pretty-quick": "pretty-quick"
+    "pretty-quick": "pretty-quick",
+    "check:prettier": "prettier . --check"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
