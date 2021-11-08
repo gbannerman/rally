@@ -1,12 +1,12 @@
-import {render, fireEvent} from '@testing-library/svelte';
-import userEvent from '@testing-library/user-event';
+import { render, fireEvent } from "@testing-library/svelte";
+import userEvent from "@testing-library/user-event";
 
-import TimerInput from '../../timer/TimerInput.svelte';
+import TimerInput from "../../timer/TimerInput.svelte";
 
 describe("TimerInput component", () => {
   it("renders correctly", () => {
     const { container } = render(TimerInput);
-    
+
     expect(container).toMatchSnapshot();
   });
 
@@ -16,7 +16,7 @@ describe("TimerInput component", () => {
     await fireEvent.click(getByLabelText("Timer"));
 
     const input = getByRole("textbox");
-    
+
     expect(input).toHaveFocus();
   });
 
@@ -27,9 +27,9 @@ describe("TimerInput component", () => {
 
     const input = getByRole("textbox");
 
-    await userEvent.type(input, '129', { delay: 500 });
+    await userEvent.type(input, "129", { delay: 500 });
     await fireEvent.submit(input);
-    
+
     expect(input).not.toHaveFocus();
   });
 
@@ -38,7 +38,7 @@ describe("TimerInput component", () => {
 
     const input = getByRole("textbox");
 
-    await userEvent.type(input, '530', { delay: 500 });
+    await userEvent.type(input, "530", { delay: 500 });
 
     expect(input).toHaveValue("5:30");
   });
@@ -48,7 +48,7 @@ describe("TimerInput component", () => {
 
     const input = getByRole("textbox");
 
-    await userEvent.type(input, '20000', { delay: 10 });
+    await userEvent.type(input, "20000", { delay: 10 });
 
     expect(input).toHaveValue("20:00");
   });
@@ -58,7 +58,9 @@ describe("TimerInput component", () => {
 
     const input = getByRole("textbox");
 
-    expect(input).toHaveStyle("width: 10px; margin-right: 2px; padding-left: 0px; right: 0px;");
+    expect(input).toHaveStyle(
+      "width: 10px; margin-right: 2px; padding-left: 0px; right: 0px;"
+    );
   });
 
   it("input hides first digit of placeholder when value length is 1", async () => {
@@ -66,7 +68,7 @@ describe("TimerInput component", () => {
 
     const input = getByRole("textbox");
 
-    await userEvent.type(input, '2', { delay: 10 });
+    await userEvent.type(input, "2", { delay: 10 });
 
     expect(input).toHaveStyle("width: 20px; margin-left: 21px;");
   });
@@ -76,7 +78,7 @@ describe("TimerInput component", () => {
 
     const input = getByRole("textbox");
 
-    await userEvent.type(input, '2', { delay: 10 });
+    await userEvent.type(input, "2", { delay: 10 });
 
     expect(input).toHaveStyle("width: 20px; margin-left: 21px;");
   });
@@ -86,7 +88,7 @@ describe("TimerInput component", () => {
 
     const input = getByRole("textbox");
 
-    await userEvent.type(input, '21', { delay: 10 });
+    await userEvent.type(input, "21", { delay: 10 });
 
     expect(input).toHaveStyle("width: 37px; margin-left: 5px;");
   });
@@ -96,7 +98,7 @@ describe("TimerInput component", () => {
 
     const input = getByRole("textbox");
 
-    await userEvent.type(input, '214', { delay: 10 });
+    await userEvent.type(input, "214", { delay: 10 });
 
     expect(input).toHaveStyle("width: 62px; margin-left: -22px;");
   });
@@ -106,7 +108,7 @@ describe("TimerInput component", () => {
 
     const input = getByRole("textbox");
 
-    await userEvent.type(input, '2145', { delay: 10 });
+    await userEvent.type(input, "2145", { delay: 10 });
 
     expect(input).toHaveStyle("width: 79px; margin-left: -40px;");
   });

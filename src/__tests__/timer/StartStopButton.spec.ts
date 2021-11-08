@@ -1,6 +1,6 @@
-import {render, fireEvent} from '@testing-library/svelte'
+import { render, fireEvent } from "@testing-library/svelte";
 
-import StartStopButton from '../../timer/StartStopButton.svelte';
+import StartStopButton from "../../timer/StartStopButton.svelte";
 
 describe("StartStopButton component", () => {
   it("renders correctly", () => {
@@ -8,7 +8,7 @@ describe("StartStopButton component", () => {
       running: false,
       onToggle: () => {},
     });
-    
+
     expect(container).toMatchSnapshot();
   });
 
@@ -19,7 +19,7 @@ describe("StartStopButton component", () => {
     });
 
     const button = getByRole("button");
-    
+
     expect(button).toHaveClass("start");
   });
 
@@ -30,7 +30,7 @@ describe("StartStopButton component", () => {
     });
 
     const button = getByRole("button");
-    
+
     expect(button).toHaveClass("stop");
   });
 
@@ -41,8 +41,8 @@ describe("StartStopButton component", () => {
     });
 
     const button = getByRole("button");
-    const icon = button.querySelector('svg');
-    
+    const icon = button.querySelector("svg");
+
     expect(icon).toHaveClass("feather-play");
   });
 
@@ -53,8 +53,8 @@ describe("StartStopButton component", () => {
     });
 
     const button = getByRole("button");
-    const icon = button.querySelector('svg');
-    
+    const icon = button.querySelector("svg");
+
     expect(icon).toHaveClass("feather-pause");
   });
 

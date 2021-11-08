@@ -1,4 +1,4 @@
-import TimerDisplay from '../../timer/TimerDisplay.svelte';
+import TimerDisplay from "../../timer/TimerDisplay.svelte";
 
 test.skip("TimerDisplay", () => {
   // TODO

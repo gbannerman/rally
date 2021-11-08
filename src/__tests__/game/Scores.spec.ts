@@ -1,12 +1,12 @@
-import {render, fireEvent} from '@testing-library/svelte'
+import { render, fireEvent } from "@testing-library/svelte";
 
-import Scores from '../../game/Scores.svelte';
+import Scores from "../../game/Scores.svelte";
 
 describe("Scores component", () => {
   it("renders correctly", () => {
     const { container } = render(Scores, {
       scores: [0, 0],
-      onScoreClick: () => {}
+      onScoreClick: () => {},
     });
 
     expect(container).toMatchSnapshot();
@@ -14,8 +14,8 @@ describe("Scores component", () => {
 
   it("displays scores of each player", () => {
     const { getAllByRole } = render(Scores, {
-      scores: [5, 9], 
-      onScoreClick: () => {}
+      scores: [5, 9],
+      onScoreClick: () => {},
     });
 
     const [player1Button, player2Button] = getAllByRole("button");
@@ -27,8 +27,8 @@ describe("Scores component", () => {
     const mockOnScoreClick = jest.fn();
 
     const { getAllByRole } = render(Scores, {
-      scores: [5, 9], 
-      onScoreClick: mockOnScoreClick
+      scores: [5, 9],
+      onScoreClick: mockOnScoreClick,
     });
 
     const [player1Button, player2Button] = getAllByRole("button");

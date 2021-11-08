@@ -1,9 +1,10 @@
-import { convertMillisecondsToTimerValue,
+import {
+  convertMillisecondsToTimerValue,
   convertTimerValueToMilliseconds,
   getMinutesFromMilliseconds,
   getSecondsFromMilliseconds,
   insertSeperator,
-  removeSeperator 
+  removeSeperator,
 } from "../../timer/timerService";
 
 const minuteInMilliseconds = 60_000;
@@ -82,13 +83,17 @@ describe("convertTimerValueToMilliseconds", () => {
   it("correctly converts three digit value", () => {
     const timerValue = "5:00";
 
-    expect(convertTimerValueToMilliseconds(timerValue)).toBe(5 * minuteInMilliseconds);
+    expect(convertTimerValueToMilliseconds(timerValue)).toBe(
+      5 * minuteInMilliseconds
+    );
   });
 
   it("correctly converts four digit value", () => {
     const timerValue = "50:00";
 
-    expect(convertTimerValueToMilliseconds(timerValue)).toBe(50 * minuteInMilliseconds);
+    expect(convertTimerValueToMilliseconds(timerValue)).toBe(
+      50 * minuteInMilliseconds
+    );
   });
 });
 

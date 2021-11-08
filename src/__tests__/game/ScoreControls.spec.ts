@@ -1,13 +1,13 @@
-import {render, fireEvent} from '@testing-library/svelte'
+import { render, fireEvent } from "@testing-library/svelte";
 
-import ScoreControls from '../../game/ScoreControls.svelte';
+import ScoreControls from "../../game/ScoreControls.svelte";
 
 describe("ScoreControls component", () => {
   it("renders correctly", () => {
     const { container } = render(ScoreControls, {
-      onResetClick: () => {}
+      onResetClick: () => {},
     });
-    
+
     expect(container).toMatchSnapshot();
   });
 
@@ -15,7 +15,7 @@ describe("ScoreControls component", () => {
     const mockOnResetClick = jest.fn();
 
     const { getByRole } = render(ScoreControls, {
-      onResetClick: mockOnResetClick
+      onResetClick: mockOnResetClick,
     });
 
     const resetScoreButton = getByRole("button");
