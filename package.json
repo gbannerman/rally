@@ -9,7 +9,7 @@
     "check:svelte": "svelte-check --tsconfig ./tsconfig.json",
     "test": "jest",
     "test:watch": "jest --watch",
-    "pretty-quick": "pretty-quick",
+    "pretty-quick": "pretty-quick --staged",
     "check:prettier": "prettier . --check"
   },
   "devDependencies": {
