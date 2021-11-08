@@ -1,6 +1,6 @@
 import {render, fireEvent} from '@testing-library/svelte'
 
-import Scores from '../game/Scores.svelte';
+import Scores from '../../game/Scores.svelte';
 
 describe("Scores component", () => {
   it("renders correctly", () => {
