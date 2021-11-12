@@ -43,4 +43,15 @@ describe("Scores component", () => {
     expect(mockOnScoreClick).toHaveBeenCalledTimes(1);
     expect(mockOnScoreClick).toHaveBeenCalledWith(0);
   });
+
+  it("shows point difference of leading player", async () => {
+    const { getByLabelText } = render(Scores, {
+      scores: [5, 9],
+      onScoreClick: () => {},
+    });
+
+    const player2PointDifference = getByLabelText("Player 2 Point Difference");
+
+    expect(player2PointDifference).toHaveTextContent("+4");
+  });
 });

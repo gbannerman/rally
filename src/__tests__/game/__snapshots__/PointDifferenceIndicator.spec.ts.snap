@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PointDifferenceIndicator component renders correctly 1`] = `
+<body>
+  <div>
+    <div
+      class="PointDifferenceIndicator svelte-16qa96h"
+    >
+      <span
+        aria-label="Player 1 Point Difference"
+        class="player1 svelte-16qa96h"
+      >
+        +
+        7
+      </span>
+       
+    </div>
+  </div>
+</body>
+`;

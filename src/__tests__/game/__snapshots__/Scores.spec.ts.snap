@@ -26,6 +26,12 @@ exports[`Scores component renders correctly 1`] = `
         </div>
       </button>
     </div>
+     
+    <div
+      class="PointDifferenceIndicator svelte-16qa96h"
+    >
+       
+    </div>
   </div>
 </body>
 `;

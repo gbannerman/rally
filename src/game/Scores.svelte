@@ -1,6 +1,10 @@
 <script lang="ts">
+  import PointDifferenceIndicator from "./PointDifferenceIndicator.svelte";
+
   export let scores: number[];
   export let onScoreClick: (index: number) => void;
+
+  $: pointDifference = [scores[0] - scores[1], scores[1] - scores[0]];
 </script>
 
 <div class="Scores">
@@ -11,6 +15,7 @@
     <div>{scores[1]}</div>
   </button>
 </div>
+<PointDifferenceIndicator {pointDifference} />
 
 <style>
   .Scores {

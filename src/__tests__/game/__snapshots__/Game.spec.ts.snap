@@ -74,6 +74,12 @@ exports[`Game component renders correctly 1`] = `
     </div>
      
     <div
+      class="PointDifferenceIndicator svelte-16qa96h"
+    >
+       
+    </div>
+     
+    <div
       class="ScoreControls svelte-1p4m5fg"
     >
       <button
