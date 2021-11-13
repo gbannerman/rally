@@ -174,7 +174,3 @@ describe("convertMillisecondsToTimerValue", () => {
     expect(convertMillisecondsToTimerValue(milliseconds)).toBe("12:00");
   });
 });
-
-test.skip("CountdownTimer", () => {
-  // TODO
-});

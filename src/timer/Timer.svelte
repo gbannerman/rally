@@ -2,8 +2,8 @@
   import {
     convertMillisecondsToTimerValue,
     convertTimerValueToMilliseconds,
-    CountdownTimer,
   } from "./timerService";
+  import { CountdownTimer } from "./CountdownTimer";
   import StartStopButton from "./StartStopButton.svelte";
   import TimerDisplay from "./TimerDisplay.svelte";
   import TimerInput from "./TimerInput.svelte";
@@ -16,12 +16,10 @@
     50,
     () => {
       running = false;
-      console.log("finished");
     },
     () => {
       remainingMilliseconds = timer.timeRemaining;
-    },
-    () => console.error("errorrrr")
+    }
   );
 
   const toggle = async () => {
