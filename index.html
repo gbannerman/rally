@@ -19,7 +19,22 @@
     <link rel="stylesheet" href="build/bundle.css" />
 
     <script defer src="build/bundle.js"></script>
+
+    <script>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          console.log("trying");
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
   </head>
 
-  <body></body>
+  <body>
+    <noscript>
+      <div>Oops! Javascript required here! Allow it and try again!</div>
+    </noscript>
+  </body>
 </html>
