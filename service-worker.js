@@ -2,7 +2,7 @@
 // Cache Name
 const CACHE_NAME = "static-cache-v1";
 // Cache Files
-const FILES_TO_CACHE = ["/index.html"];
+const FILES_TO_CACHE = ["index.html"];
 // install
 self.addEventListener("install", (evt) => {
   console.log("[ServiceWorker] Install");
