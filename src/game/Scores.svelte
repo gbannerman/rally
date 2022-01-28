@@ -31,6 +31,7 @@
     align-items: center;
     justify-content: center;
     color: #fafaff;
+    touch-action: manipulation;
   }
 
   .player1 {

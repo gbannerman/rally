@@ -4,23 +4,23 @@ exports[`Scores component renders correctly 1`] = `
 <body>
   <div>
     <div
-      class="Scores svelte-15zsq2a"
+      class="Scores svelte-c6f6eo"
     >
       <button
-        class="score player1 svelte-15zsq2a"
+        class="score player1 svelte-c6f6eo"
       >
         <div
-          class="svelte-15zsq2a"
+          class="svelte-c6f6eo"
         >
           0
         </div>
       </button>
        
       <button
-        class="score player2 svelte-15zsq2a"
+        class="score player2 svelte-c6f6eo"
       >
         <div
-          class="svelte-15zsq2a"
+          class="svelte-c6f6eo"
         >
           0
         </div>
